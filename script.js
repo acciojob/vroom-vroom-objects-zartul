@@ -15,7 +15,7 @@ function SportsCar(make, model, topSpeed) {
 	
 // }
 Car.prototype.getMakeModel=function(){
-		return "`${make}` `${model}`"
+		return "`${this.make}` `${this.model}`"
 	}
 // class SportsCar extends Car{
 // 	constructor(make,model,topSpeed){
@@ -27,6 +27,7 @@ SuperCar.prototype.getTopSpeed=function(){
 		return this.topSpeed;
 	}
 SportsCar.prototype=Object.create(Car.prototype);
+SportsCar.prototype.constructor=SportsCar;
 // Do not change the code below
 window.Car = Car;
 window.SportsCar = SportsCar;
